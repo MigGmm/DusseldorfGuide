@@ -22,7 +22,7 @@
             }
             else
             {
-                die('Error al conectar con la base de datos '.$this->str_database.' con el usuario '.$this->str_user.' y la contraseña '.$this->str_password.' en el host '.$this->str_host);
+                die('Cant connect to the database '.$this->str_database.' with user '.$this->str_user.' and password '.$this->str_password.' in '.$this->str_host);
             }
             
         }
@@ -70,7 +70,7 @@
             }
             else
             {
-                echo 'Debes introducir al menos un nombre y una contraseña de usuario.';
+                echo 'You must type user and password.';
             }   
         }
         
@@ -87,14 +87,14 @@
                     if($result != null)
                     {
                         $log = array();
-                        $log[] = array('cambiarPasswordStatus'=>1);
+                        $log[] = array('changePasswordStatus'=>1);
                         echo json_encode($log);
                         mysqli_close($connection);
                     }
                     else
                     {
                         $log = array();
-                        $log[] = array('cambiarPasswordStatus'=>0);
+                        $log[] = array('changePasswordStatus'=>0);
                         echo json_encode($log);
                         mysqli_close($connection);
                     }
@@ -103,7 +103,7 @@
                 else
                 {
                     $log = array();
-                    $log[] = array('cambiarPasswordStatus'=>'noexist');
+                    $log[] = array('changePasswordStatus'=>'noexist');
                     echo json_encode($log);
                     mysqli_close($connection);
                 }
@@ -205,7 +205,7 @@
             }
 	    else 
 	    {
-		print "Error al realizar la consulta.";
+		print "Error in the query.";
             }
             
         }
@@ -234,7 +234,7 @@
             	}
 	    	else 
 	    	{
-			print "Error al realizar la consulta.";
+			print "Error in the query.";
             	}            
         }
         
@@ -261,7 +261,7 @@
             }
             else
             {
-                print "Error al realizar la consulta.";
+                print "Error in th query.";
             }
         }
         
@@ -288,7 +288,7 @@
             }
             else
             {
-                print "Error al realizar la consulta.";
+                print "Error in the query.";
             }
         }
     }
