@@ -1,0 +1,66 @@
+<LinearLayout
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mapButton"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_dialog_map"
+            android:onClick="mapClicked" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/placesButton"
+            android:layout_weight="1"
+            android:onClick="placesButtonClicked"
+            android:background="@android:drawable/ic_menu_sort_by_size" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accountButton"
+            android:layout_weight="1"
+            android:onClick="accountButtonClicked"
+            android:background="@android:drawable/ic_menu_my_calendar" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsButton"
+            android:layout_weight="1"
+            android:onClick="preferencesButtonClicked"
+            android:background="@android:drawable/ic_menu_edit" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoutButton"
+            android:layout_weight="1"
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:onClick="logoutClicked" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content"></FrameLayout>
+
+    <fragment
+        android:id="@+id/location_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_gravity="center_horizontal|top" />
+
+</LinearLayout>

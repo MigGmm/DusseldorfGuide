@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="maptype"
+        android:title="@string/map_type"
+        android:summary="%s"
+        android:entries="@array/map_types"
+        android:entryValues="@array/map_types_values"
+        android:defaultValue="0" />
+
+    <ListPreference
+        android:key="markercolour"
+        android:title="@string/marker_colour"
+        android:summary="%s"
+        android:entries="@array/marker_colours"
+        android:entryValues="@array/map_types_values"
+        android:defaultValue="0" />
+
+</PreferenceScreen>
